@@ -1,0 +1,54 @@
+:: StoryTitle
+Elevator Out Of Service
+
+
+:: StoryData
+{
+  "ifid": "BD2A21E0-5341-4BE8-A142-32DFC0E3487A",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "the beginning",
+  "zoom": 1
+}
+
+
+:: "BIRD!" {"position":"200,525","size":"100,100"}
+Jerry: "Woah easy now no need to yell, also it's Jerry, Don't wear it out now!
+
+
+:: "Where am I?" {"position":"325,525","size":"100,100"}
+"What does it look like buddy?"
+
+After asking you this question the surroundings seem to become clear to you, you are in a   boxed in room its a little stuffy. The floor beneath you somehow seems to shift a bit. outside of the ominous cage like door, It's definetly an older model then what you are use to...but this must be...
+
+"An Elevator?"
+
+
+Jerry: "Ding ding ding! Great detective work, really impressive stuff champ!"
+
+"His cheerful tone doesnt change or really indicate but you get the sense that he is mocking you...everything about Jerry's tone is off putting. they havent stopped smiling...you didnt even think birds could smile...
+
+
+:: Enter The Elevator. {"position":"325,400","size":"100,100"}
+ <img src="https://media.discordapp.net/attachments/1304479658003136512/1306488589584175204/Jerry_purple_hues-1_dragged.png?ex=67c34191&is=67c1f011&hm=98db6c611b98e325d606ef3cf2f60e82a157bb0173e58171fb1b3e8b9e2b44fe&=&format=webp&quality=lossless&width=360&height=360" width="500" height="600"> 
+You wake up in a cramped room, a strange bird larger then you is making a lot of noise...man that things loud...how...did you get here?
+
+....You try to recall, but your mind feels like a dense fog, The bird hasnt stopped making noise...you try to focus on the bird...wait...is it speaking to you?
+
+Bird: "Look Pal imma need ya to tell me a floor...Kinda my job"
+
+
+
+[["Where am I?"]]
+
+[["BIRD!"]]
+
+
+:: the beginning {"position":"325,275","size":"100,100"}
+It seems your time has come...
+
+
+
+Go on...they are waiting for you...
+
+[[Enter The Elevator.]]
