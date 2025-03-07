@@ -12,8 +12,146 @@ Elevator Out Of Service
 }
 
 
-:: "BIRD!" {"position":"200,525","size":"100,100"}
-Jerry: "Woah easy now no need to yell, also it's Jerry, Don't wear it out now!
+:: "An Elevator?" {"position":"325,650","size":"100,100"}
+(if: $gotName)[Jerry: "Ding ding ding! Great detective work, really impressive stuff champ!"]
+(else:)[Bird: "Ding ding ding! Great detective work, really impressive stuff champ!"]
+
+His cheerful tone doesnt change or really indicate but you get the sense that he is mocking you...everything about Jerry's tone is off putting. they havent stopped smiling...you didnt even think birds could smile...
+
+(if: $gotName)[Jerry: "Now, what floor?"]
+(else:)[Bird: "Now, what floor?"]
+
+[["How should I know?"]]
+
+
+:: "An elevator." {"position":"250,1275","size":"100,100"}
+Musician: Well that's obviously a lie… Why would a ghost need to use an elevator?
+
+[[He still looks sad.]]
+
+(set: $ElevatorReply to true)
+
+
+:: "BIRD!" {"position":"200,450","size":"100,100"}
+Jerry: "Woah, easy now, no need to yell. Also, the name's Jerry. Don't wear it out now!"
+
+[["Where am I?"]]
+
+(set: $gotName to true)
+
+
+:: "Dead, I think." {"position":"100,1275","size":"100,100"}
+Musician: Dead…? Oh… I guess that makes sense…
+
+[[He still looks sad.]]
+
+
+:: "Hell." {"position":"400,1275","size":"100,100"}
+Musician: Oh… I'm not sure I believe in hell…
+
+[[He still looks sad.]]
+
+
+:: "How should I know?" {"position":"325,775","size":"100,100"}
+(if: $gotName)[Jerry: *Sigh*. Okay, buddy. Bottom floor it is then.
+
+Jerry pushes a button and the elevator starts moving down.]
+(else:)[Bird: *Sigh*. Okay, buddy. Bottom floor it is then.
+
+The bird pushes a button and the elevator starts moving down.]
+
+[["Wait, hold on! Am I going to hell or something?"]]
+
+[["What's on the bottom floor?" ->Rude bird.]]
+
+
+:: "I like it!" {"position":"600,1900","size":"100,100"}
+Musician: R-really? You do?
+You: Yeah! I think it's great!
+Musician: Oh! Thank you!
+Musician: You know, I'm not sure anyone's told me that before.
+Musician: Maybe... Hm...
+Musician: You know what, I think I can finish it on my own! Suddenly I'm bursting with ideas!
+
+(Musician leaves happily)
+(Kind ending)
+
+[[The elvator has sttrarted back up, it seems.->Elevator Interlude 1]]
+
+
+:: "Needs more trumpet." {"position":"600,2025","size":"100,100"}
+Musician: Oh. R-really?
+You: Oh, for sure. You can never have too much trumpet.
+Musician: Oh. Okay! Yes, now that I think about it, I'm sure you're right.
+Musician: You know, I haven't felt inspired to work on this in a long time, but now...
+Musician: I think I can do it! I'll finish it!
+Musician: Thank you! I hope I'll see you again someday so you can hear the finished version.
+
+(Musician leaves)
+(Neutral ending)
+
+[[The elvator has sttrarted back up, it seems.->Elevator Interlude 1]]
+
+
+:: "No." {"position":"325,1650","size":"100,100"}
+You: Let me hear your song. Maybe we can figure out how to finish it.
+
+Musician: Really? You… want to hear it?
+
+You: Yeah!
+
+Musician: Okay, well… Here goes…
+
+[[Listen.]]
+
+
+:: "Probably." {"position":"600,1775","size":"100,100"}
+You: I've never heard of a ghost publishing a song, after all.
+
+Musician: Yes, you're right. I should have siezed the time I had.
+
+Musician: Now I've got none left.
+
+Musician: How could I have squandered my life like this…?
+
+(The musician leaves the elevator, forlorn)
+
+(Floor cleared—hellseeker ending)
+
+[[Damn.->Elevator Interlude 1]]
+
+
+:: "Wait, hold on! Am I going to hell or something?" {"position":"200,850","size":"100,100"}
+You: Because this seems kind of hell-coded.
+
+You pause for effect.
+
+You: A hellevator.
+
+(if: $gotName)[Jerry: "Oh wooow, good one. Looks like someone was a comedy major."]
+(else:)[Bird: "Oh wooow, good one. Looks like someone was a comedy major."]
+
+[[Rude bird.]]
+
+
+:: "What's wrong?" {"position":"325,1525","size":"100,100"}
+Musician: Hmm…? Oh, I… I was hoping I would have more time, I guess… It’s strange.
+
+Musician: I feel… hollow… like I'm exactly where I asked to be and yet…
+
+Musician: … I’m not sure I want to be here.
+
+Musician: I was hoping I would at least finish my song before I passed away.
+
+Musician: Truth be told, I… I never really wrote it down…
+
+Musician: It’s just kind of been floating in my head… I kept putting it off…
+
+Musician: Is… Is it too late now?
+
+[["No."]]
+
+[["Probably."]]
 
 
 :: "Where am I?" {"position":"325,525","size":"100,100"}
@@ -21,27 +159,134 @@ Jerry: "Woah easy now no need to yell, also it's Jerry, Don't wear it out now!
 
 After asking you this question the surroundings seem to become clear to you, you are in a   boxed in room its a little stuffy. The floor beneath you somehow seems to shift a bit. outside of the ominous cage like door, It's definetly an older model then what you are use to...but this must be...
 
-"An Elevator?"
+[["An Elevator?"]]
 
 
-Jerry: "Ding ding ding! Great detective work, really impressive stuff champ!"
+:: "Yes? What?" {"position":"475,1525","size":"100,100"}
+Musician: Oh thank goodness. I thought you were ignoring me for a second there.
 
-"His cheerful tone doesnt change or really indicate but you get the sense that he is mocking you...everything about Jerry's tone is off putting. they havent stopped smiling...you didnt even think birds could smile...
+[["Just dissociating. So what's your deal?"->"What's wrong?"]]
+
+
+:: Ask Jerry about elevator halt {"position":"200,1075","size":"100,100"}
+
+
+
+:: Elevator Interlude 1 {"position":"900,1850","size":"100,100"}
+
+
+
+:: Enjoy the ride. {"position":"325,1025","size":"100,100"}
+A bout three minutes of enjoying the ride later, the elevator suddenly lurches. The lights flicker on and off, and when they return you realize two things:
+
+1. The elevator has stopped.
+
+2. There is someone new in it.
+
+(if: $gotName)[A vague purple specter floats in front of you. He looks upset. Jerry looks his same chipper self, but somehow you get the feeling that he's annoyed.]
+(else:)[A vague purple specter floats in front of you. He looks upset. The bird looks his same chipper self, but somehow you get the feeling that he's annoyed.]
+
+[[Talk to the ghost.]]
+
+[[Talk to Jerry. ->Ask Jerry about elevator halt]]
 
 
 :: Enter The Elevator. {"position":"325,400","size":"100,100"}
- <img src="https://media.discordapp.net/attachments/1304479658003136512/1306488589584175204/Jerry_purple_hues-1_dragged.png?ex=67c34191&is=67c1f011&hm=98db6c611b98e325d606ef3cf2f60e82a157bb0173e58171fb1b3e8b9e2b44fe&=&format=webp&quality=lossless&width=360&height=360" width="500" height="600"> 
-You wake up in a cramped room, a strange bird larger then you is making a lot of noise...man that things loud...how...did you get here?
+<img src="https://media.discordapp.net/attachments/1304479658003136512/1306488589584175204/Jerry_purple_hues-1_dragged.png?ex=67c34191&is=67c1f011&hm=98db6c611b98e325d606ef3cf2f60e82a157bb0173e58171fb1b3e8b9e2b44fe&=&format=webp&quality=lossless&width=360&height=360" width="500" height="600"> 
+You wake up in a cramped room, a strange bird larger then you is making a lot of noise... Man, that thing's loud... How... did you get here?
 
-....You try to recall, but your mind feels like a dense fog, The bird hasnt stopped making noise...you try to focus on the bird...wait...is it speaking to you?
+... You try to recall, but your mind feels like a dense fog, The bird hasnt stopped making noise... You try to focus on the bird... Wait... Is it speaking to you?
 
-Bird: "Look Pal imma need ya to tell me a floor...Kinda my job"
-
-
+Bird: "Look pal, imma need ya to tell me a floor... Kinda my job."
 
 [["Where am I?"]]
 
 [["BIRD!"]]
+
+
+:: He still looks sad. {"position":"325,1400","size":"100,100"}
+Musician: … I don’t remember dying, but I don’t feel alive… so I guess I must have…
+
+Musician: Oh. I… I never got to…
+
+He looks like he might cry.
+
+[["..."->Silent 2]]
+
+[["What's wrong?"]]
+
+
+:: Listen. {"position":"325,1775","size":"100,100"}
+(audio cue here)
+
+(music description)
+
+When the song is finished, the musician looks up at you hopefully.
+
+Musician: So, what do you think?
+
+[["I like it!"]]
+        
+[["Needs more trumpet."]]
+
+
+:: Musician death {"position":"600,1650","size":"100,100"}
+Musician: Please… Please, answer me. Please!
+
+Musician: Please, I- Aah! AAAAAAUUUUUUGGGGGHHH!!!
+
+(He crumbles to dust)
+
+(Floor cleared - Hellseeker ending)
+
+[[...->Elevator Interlude 1]]
+
+
+:: Rude bird. {"position":"325,900","size":"100,100"}
+(if: $gotName)[Jerry: You really ask a lot of questions, huh?
+
+He turns his attention to the beams of light passing by the small grate in the wall.
+
+Jerry: Your floor is what you make it. Just enjoy the ride.]
+(else:)[Bird: You really ask a lot of questions, huh?
+
+He turns his attention to the beams of light passing by the small grate in the wall.
+
+Bird: Your floor is what you make it. Just enjoy the ride.]
+
+[[Enjoy the ride.]]
+
+
+:: Silent 2 {"position":"600,1400","size":"100,100"}
+Musician: Hello? Anyone there?
+
+[["Yes? What?"]]
+
+[["..."->Silent 3]]
+
+
+:: Silent 3 {"position":"600,1525","size":"100,100"}
+Musician: Oh… Um…
+
+[["Yes? What?"]]
+
+[["..."->Musician death]]
+
+
+:: Talk to the ghost. {"position":"325,1150","size":"100,100"}
+The ghost looks at you blankly.
+
+Musician: … Oh… Hello… 
+
+Musician: … Where are we? 
+
+[["Dead, I think."]]
+
+[["An elevator."]]
+
+[["Hell."]]
+
+[["..."->He still looks sad.]]
 
 
 :: the beginning {"position":"325,275","size":"100,100"}
@@ -52,3 +297,6 @@ It seems your time has come...
 Go on...they are waiting for you...
 
 [[Enter The Elevator.]]
+
+(set: $gotName to false)
+(set: $ElevatorReply to false)
