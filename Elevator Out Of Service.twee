@@ -168,12 +168,34 @@ Musician: Oh thank goodness. I thought you were ignoring me for a second there.
 [["Just dissociating. So what's your deal?"->"What's wrong?"]]
 
 
+:: Am I a Liminal? {"position":"1200,2050","size":"100,100"}
+Jerry: No, the Liminals are different from you and me.
+
+Jerry: I mean, technically they're still alive. They've just kinda gotten stuck.
+
+[[Hmm.->Elevator Interlude 1]]
+
+
 :: Ask Jerry about elevator halt {"position":"200,1075","size":"100,100"}
 
 
 
-:: Elevator Interlude 1 {"position":"900,1850","size":"100,100"}
+:: Come here often? {"position":"1050,1625","size":"100,100"}
+Jerry: You're a real comedian, huh?
 
+[[Darn right you are.->Elevator Interlude 1]]
+
+
+:: Elevator Interlude 1 {"position":"900,1850","size":"100,100"}
+The elevator continues down. Jerry seems to have no intent to talk to you.
+
+[[So who are you?]]
+
+[[What was that?]]
+
+[[Come here often?]]
+
+[[...->Floor 2 Start]]
 
 
 :: Enjoy the ride. {"position":"325,1025","size":"100,100"}
@@ -204,6 +226,10 @@ Bird: "Look pal, imma need ya to tell me a floor... Kinda my job."
 [["BIRD!"]]
 
 
+:: Floor 2 Start {"position":"900,1500","size":"100,100"}
+
+
+
 :: He still looks sad. {"position":"325,1400","size":"100,100"}
 Musician: … I don’t remember dying, but I don’t feel alive… so I guess I must have…
 
@@ -214,6 +240,14 @@ He looks like he might cry.
 [["..."->Silent 2]]
 
 [["What's wrong?"]]
+
+
+:: I'm not doing that {"position":"1200,1925","size":"100,100"}
+Jerry: Alright, jeez.
+
+Jerry: Anyway.
+
+[[Anyway.->Elevator Interlude 1]]
 
 
 :: Listen. {"position":"325,1775","size":"100,100"}
@@ -240,6 +274,12 @@ Musician: Please, I- Aah! AAAAAAUUUUUUGGGGGHHH!!!
 (Floor cleared - Hellseeker ending)
 
 [[...->Elevator Interlude 1]]
+
+
+:: Oh. {"position":"825,2100","size":"100,100"}
+Jerry: Yeah.
+
+[[Well then.->Elevator Interlude 1]]
 
 
 :: Rude bird. {"position":"325,900","size":"100,100"}
@@ -273,6 +313,22 @@ Musician: Oh… Um…
 [["..."->Musician death]]
 
 
+:: So who are you? {"position":"900,1975","size":"100,100"}
+Jerry: The name's Jerry. Can't you see the nametag?
+
+Jerry: I'm the elevator operator.
+
+[[What's an elevator operator?]]
+
+[[Oh.]]
+
+
+:: Sure {"position":"1200,1650","size":"100,100"}
+Jerry: Good attitude! You'll be like my intern while you're here, heheh.
+
+[[Unpaid, you assume.->Elevator Interlude 1]]
+
+
 :: Talk to the ghost. {"position":"325,1150","size":"100,100"}
 The ghost looks at you blankly.
 
@@ -287,6 +343,36 @@ Musician: … Where are we? 
 [["Hell."]]
 
 [["..."->He still looks sad.]]
+
+
+:: What was that? {"position":"1050,1850","size":"100,100"}
+Jerry: What, the musician? I call 'em Liminals.
+
+Jerry: Sometimes they come here before they're supposed to and I have to clear 'em out.
+
+Jerry: You seem pretty good at that, actually. Maybe you can help me out while you're here, eh?
+
+[[Sure]]
+
+[[What's in it for me?]]
+
+[[I'm not doing that]]
+
+[[Am I a Liminal?]]
+
+
+:: What's an elevator operator? {"position":"975,2100","size":"100,100"}
+Jerry: Right, I forgot the profession went out of style in your world.
+
+Jerry: I run the elevator. Get everyone to the right floor, clear out the riff raff. You get it.
+
+[[Seems unnecessary but okay.->Elevator Interlude 1]]
+
+
+:: What's in it for me? {"position":"1200,1775","size":"100,100"}
+Jerry: Nothing, really. I mean, I'm not going to pay you.
+
+[[Aw shucks.->Elevator Interlude 1]]
 
 
 :: the beginning {"position":"325,275","size":"100,100"}
