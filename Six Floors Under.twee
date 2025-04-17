@@ -17,6 +17,8 @@ Six Floors Under
 
 [[Am I dead?]]
 
+[[So seriously, where are we going?]]
+
 
 :: ... An elevator? {"position":"350,450","size":"100,100"}
 Ding ding ding! Great detective work, really impressive stuff. Now, what floor?
@@ -24,27 +26,52 @@ Ding ding ding! Great detective work, really impressive stuff. Now, what floor?
 [[How should I know?]]
 
 
-:: Am I dead? {"position":"250,1000","size":"100,100"}
-Was that not clear? (if: $hellJoke is true)[I mean, I kinda thought you got that on account of the hell comment.]
+:: ... Is this it? {"position":"1400,2425","size":"100,100"}
+You: I mean, is it this forever?
 
-[[Oh.]]
+Jerry: Ha! Ha ha ha ha! (if: $rude is true)[Now who's the rude one, pal?] Are you saying being stuck in here with me is as good as purgatory?
+
+[[Well, is it?]]
+
+
+:: Am I dead? {"position":"175,1000","size":"100,100"}
+Oh yeah, for sure. Was that not clear? (if: $hellJoke is true)[I mean, I kinda thought you got that on account of the hell comment.]
+
+[[I can't be dead.]]
+
+[[But I don't believe in an afterlife.]]
+
+[[This can't be right.]]
+
+
+:: Aren't you supernatural, though? {"position":"625,1850","size":"100,100"}
+Eh. Maybe! That doesn't mean I get the deets on all the dead, though. I wouldn't want that anyway, that sounds grim as hell.
+
+[[What do you mean, maybe?]]
+
+[[I want to get back. There has to be a way.->There has to be a way]]
+
+
+:: Because then I'd be alone. {"position":"1225,2100","size":"100,100"}
+... Yeah. Well, lucky I'm here, then.
+...
+
+[[This elevator's taking a long time.]]
+
+
+:: But I don't believe in an afterlife. {"position":"375,1150","size":"100,100"}
+Too bad, buddy, 'cause you're in it. Or on your way, at least.
+
+[[Then what's your role?->Then are you here to judge me?]]
+
+[[I don't believe you.]]
 
 [[How did I die?]]
 
 [[Is there any way back?]]
 
 
-:: Aren't you supernatural, though? {"position":"100,1600","size":"100,100"}
-Eh. Maybe!
-
-
-:: But I still want to get back. There has to be a way. {"position":"700,1450","size":"100,100"}
-There doesn't have to, actually. I mean, for all you know this is just a hallucination produced in your final moments to help you deal with death.
-
-[[Is it?]]
-
-
-:: But I'm not ready yet. {"position":"550,1150","size":"100,100"}
+:: But I'm not ready yet. {"position":"1075,1400","size":"100,100"}
 If I had a nickel for everybody who was ready, I wouldn't even have enough money for bird seed. What makes you so special?
 
 [[I was kind.]]
@@ -58,7 +85,13 @@ If I had a nickel for everybody who was ready, I wouldn't even have enough money
 (set: $kind to false) (set: $important to false) (set: $loved to false)
 
 
-:: But there was more I wanted to do. {"position":"400,1300","size":"100,100"}
+:: But still... {"position":"1075,2000","size":"100,100"}
+You got a real Eurydice complex, my friend. Or is it a Persephone complex? But if you're thinkin' that I'm your Hades, you'd better buy me dinner first. The point is, you're toast. This elevator don't go up. If an Orpheus comes for you, he's stuck down here just like you are.
+
+[[What about you? Can't you let me go?]]
+
+
+:: But there was more I wanted to do. {"position":"925,1550","size":"100,100"}
 Everybody has more they wanted to do. It's an infinite world out there. You could have done anything. But nobody gets to do everything. The real thing is, did you make what you *did* do count?
 
 [[Yes.]]
@@ -68,10 +101,59 @@ Everybody has more they wanted to do. It's an infinite world out there. You coul
 [[I think so.]]
 
 
-:: How did I die? {"position":"100,1150","size":"100,100"}
-How should I know? I'm just the elevator guy.
+:: But what about the stories? {"position":"1075,1850","size":"100,100"}
+What, you mean myths about this stuff? Look around, pal. I don't think any of them say you're gonna end up in an elevator.
+
+[[But still...]]
+
+
+:: GoodDeed {"position":"1000,2150","size":"100,100"}
+How do I know it's a good deed? For all I know, you're a serial killer or a loan shark or a person who looks at their phone at the movie theater.
+
+(if: $money is false)[ [[Okay, then I can pay you..->Money.]] ]
+
+(if: $goodDeed is false)[ [[Okay, then you'd have my gratitude.->Gratitude.]] ]
+
+[[...->Long silence]]
+
+(set: $goodDeed to true)
+
+
+:: Gratitude. {"position":"700,2150","size":"100,100"}
+Sorry, pal. Ain't no store in the world that takes gratitude as payment. For all you know, I've got a dozen mouths to feed back home.
+
+(if: $money is false)[ [[Okay, then I'd pay you.->Money.]] ]
+
+(if: $goodDeed is false)[ [[Okay, then you'd have the satisfaction of doing a good deed.->GoodDeed]] ]
+
+[[...->Long silence]]
+
+(set: $gratitude to true)
+
+
+:: Haven't done anything {"position":"250,1600","size":"100,100"}
+You ask too many questions. I could be listening to a podcast right now if you'd quit your yappin'.
+
+[[There are podcasts in the underworld??]]
+
+[[Jeez. You're pretty prickly, you know that?]]
+
+
+:: Hm. {"position":"400,1850","size":"100,100"}
+Hm.
+
+[[How did I die?]]
+
+[[Is there any way back?]]
+
+
+:: How did I die? {"position":"700,1400","size":"100,100"}
+Let me see here... OH, that is *brutal*... Wow... Oh that's... Man, I almost feel bad now... That is *embarrassing*!
+... Ah, I'm just messin' with you. I've got no idea.
 
 [[Aren't you supernatural, though?]]
+
+[[Is there any way back?]]
 
 
 :: How should I know? {"position":"125,450","size":"100,100"}
@@ -79,22 +161,52 @@ How should I know? I'm just the elevator guy.
 
 [[Wait, hold on! Am I going to hell or something?]]
 
-[[What's on the bottom floor?]]
+[[What's on the bottom floor?->What's on the bottom floor?]]
 
 (set: $elevatorMoving to true)
 
 
-:: I guess not, but I haven't done anything to you. {"position":"700,1825","size":"100,100"}
-You ask too many questions. That's enough for me.
+:: I can't be dead. {"position":"250,1150","size":"100,100"}
+You: I don't even remember dying.
+
+Jerry: Eh, it's not uncommon. It'll probably come back to you eventually. Though I'm not sure why you'd want that particular memory.
+
+[[Then what's your role?->Then are you here to judge me?]]
+
+[[I don't believe you.]]
+
+[[How did I die?]]
+
+[[Is there any way back?]]
 
 
-:: I think so. {"position":"550,1450","size":"100,100"}
+:: I don't believe you. {"position":"325,1300","size":"100,100"}
+Okay? Not my problem, pal.
+
+[[That's rude. Shouldn't you have respect for the dead?]]
+
+
+:: I don't want you to be either. {"position":"1225,1975","size":"100,100"}
+Really?
+
+... Why?
+
+[[Because then I'd be alone.]]
+
+
+:: I guess this is goodbye. {"position":"1400,2675","size":"100,100"}
+It sure is. Unless you're plannin' on dyin' again anytime soon. Ha ha ha!
+
+(The player has to walk through the doors. There is nothing else to do.)
+
+
+:: I think so. {"position":"1075,1700","size":"100,100"}
 Then you probably did. Good for you. So what are you worried about?
 
 [[I'm afraid. What's waiting for me?]]
 
 
-:: I was important. {"position":"700,1000","size":"100,100"}
+:: I was important. {"position":"1225,1250","size":"100,100"}
 Plenty of people are important. Everybody, according to some people. That doesn't make you special. (set: $important to true)
 
 (if: $kind is false)[ [[I was kind.]] ]
@@ -104,7 +216,7 @@ Plenty of people are important. Everybody, according to some people. That doesn'
 [[I'm not special.]]
 
 
-:: I was kind. {"position":"700,1150","size":"100,100"}
+:: I was kind. {"position":"1225,1400","size":"100,100"}
 Lots of people are kind. That's nice, but it doesn't make you special. (set: $kind to true)
 
 (if: $important is false)[ [[I was important.]] ]
@@ -114,7 +226,7 @@ Lots of people are kind. That's nice, but it doesn't make you special. (set: $ki
 [[I'm not special.]]
 
 
-:: I was loved. {"position":"700,1300","size":"100,100"}
+:: I was loved. {"position":"1225,1550","size":"100,100"}
 Everybody's loved by somebody. Bully for you, but that's about the least special thing you can be. (set: $loved to true)
 
 (if: $important is false)[ [[I was important.]] ]
@@ -124,29 +236,37 @@ Everybody's loved by somebody. Bully for you, but that's about the least special
 [[I'm not special.]]
 
 
-:: I'm afraid. What's waiting for me? {"position":"400,1600","size":"100,100"}
+:: I wish you were. {"position":"1350,1975","size":"100,100"}
+Yeah? You wanna be alone in here?
+
+[[...->Silence]]
+
+
+:: I'm afraid. What's waiting for me? {"position":"925,1850","size":"100,100"}
 You seem to think I've got all the answers. I don't. I just run the elevator.
 
 [[Aren't you supernatural, though?]]
 
 
-:: I'm not special. {"position":"550,1300","size":"100,100"}
-Yeah. But don't get down about it. Nobody's more special than death, pal.
+:: I'm not special. {"position":"1075,1550","size":"100,100"}
+Yeah. But don't get yourself down about it. Nobody's more special than death, pal.
 
 [[How did I die?]]
 
 [[But there was more I wanted to do.]]
 
-[[But I still want to get back. There has to be a way.]]
+[[But I still want to get back. There has to be a way.->There has to be a way]]
 
 
-:: Is it? {"position":"700,1575","size":"100,100"}
-I dunno. It could be. I'd like to think it's literal, though. I don't wanna be a figment of your imagination, I don't like you enough for that.
+:: Is it? {"position":"1225,1850","size":"100,100"}
+I dunno. It could be. I'd like to think it's literal, though. I don't wanna be a figment of your imagination.
 
-[[That's rude. Shouldn't you have respect for the dead?]]
+[[I don't want you to be either.]]
+
+[[I wish you were.]]
 
 
-:: Is there any way back? {"position":"400,1150","size":"100,100"}
+:: Is there any way back? {"position":"850,1400","size":"100,100"}
 Don't you know how death works? No, there's no way back. You're done.
 
 [[But there was more I wanted to do.]]
@@ -154,22 +274,81 @@ Don't you know how death works? No, there's no way back. You're done.
 [[But I'm not ready yet.]]
 
 
-:: No. {"position":"400,1450","size":"100,100"}
+:: Jeez. You're pretty prickly, you know that? {"position":"400,1725","size":"100,100"}
+Excuse you. I happen to think I'm a real treat.
+
+[[Hm.]]
+
+
+:: Just thinking. {"position":"1150,2450","size":"100,100"}
+Yeah? Penny for your thoughts.
+
+[[Will other people be down there? On my floor?]]
+
+
+:: Long silence {"position":"850,2300","size":"100,100"}
+...
+
+[[...->Longer silence]]
+
+
+:: Longer silence {"position":"1000,2300","size":"100,100"}
+...
+
+[[...->Longest silence]]
+
+
+:: Longest silence {"position":"1150,2300","size":"100,100"}
+...
+... Okay, you're freakin' me out, pal? Did I break you? You're never this quiet.
+
+[[Just thinking.]]
+
+
+:: Money. {"position":"850,2150","size":"100,100"}
+Ha! You think I need money? I'm a psychopomp! Besides, look at me. I'm obviously employed. For all you know, I've got a 401k.
+
+(if: $gratitude is false)[ [[Okay, then you'd have my gratitude.->Gratitude.]] ]
+
+(if: $goodDeed is false)[ [[Okay, then you'd have the satisfaction of doing a good deed.->GoodDeed]] ]
+
+[[...->Long silence]]
+
+(set: $money to true)
+
+
+:: No. {"position":"925,1700","size":"100,100"}
 That's too bad. But there's nothing you can do about it now, so there's no need to stress about it.
 
 [[I'm afraid. What's waiting for me?]]
 
 
-:: Oh. {"position":"250,1150","size":"100,100"}
-Yeah.
+:: Oh. {"position":"1150,2750","size":"100,100"}
+But I hope they are, pal.
 
-[[How did I die?]]
-
-[[Is there any way back?]]
+[[Thanks.]]
 
 
-:: Respect {"position":"825,1825","size":"100,100"}
-What makes dead people so special? A jerk's a jerk in my book. Doesn't matter if they got a pulse or not.
+:: Respect {"position":"400,1600","size":"100,100"}
+What makes dead people so special? A jerk's a jerk in my book. Don't matter if they got a pulse or not.
+
+[[Jeez. You're pretty prickly, you know that?]]
+
+
+:: Silence {"position":"1350,2100","size":"100,100"}
+...
+
+[[This elevator's taking a long time.]] 
+
+
+:: So seriously, where are we going? {"position":"325,1000","size":"100,100"}
+Oh, you're like, super dead. Was that not clear? (if: $hellJoke is true)[I mean, I kinda thought you got that on account of the hell comment.]
+
+[[I can't be dead.]]
+
+[[But I don't believe in an afterlife.]]
+
+[[This can't be right.]]
 
 
 :: Start {"position":"200,100","size":"100,100"}
@@ -183,7 +362,15 @@ What floor, pal?
 
 [[How should I know?]]
 
-(set: $elevatorMoving to false) (set: $hellJoke to false)
+(set: $elevatorMoving to false) (set: $hellJoke to false) (set: $rude to false) (set: $judge to false) (set: $anger to false)
+
+
+:: Thanks. {"position":"1150,2900","size":"100,100"}
+Yeah.
+
+...
+
+[[This elevator's taking a long time.]] 
 
 
 :: That's not really what I meant. {"position":"500,100","size":"100,100"}
@@ -194,12 +381,62 @@ What floor, pal?
 [[Jeez, fine. Who are you?->Who are you?]]
 
 
-:: That's rude. Shouldn't you have respect for the dead? {"position":"700,1700","size":"100,100"}
+:: That's rude. Shouldn't you have respect for the dead? {"position":"325,1450","size":"100,100"}
 I deal with the dead all day every day. You want me to have respect for *all* of them?
 
 [[Yes.->Respect]]
 
-[[I guess not, but I haven't done anything to you.]]
+[[I guess not, but I haven't done anything to you.->Haven't done anything]]
+
+(set: $rude to true)
+
+
+:: Then are you here to judge me? {"position":"175,1300","size":"100,100"}
+(if: $judge is true)[Oh, no no no! I guess maybe my comparisons need some work... ]I'm just a guide, see? I take you down to your floor, but that's it.
+
+[[Then hypothetically, what would happen if I killed you?]]
+
+
+:: Then hypothetically, what would happen if I killed you? {"position":"175,1450","size":"100,100"}
+HA! Ha ha ha ha ha ha ha ha ha ha! Oh, I needed that. Heh heh. Anyway, I'd like to see you try, pal.
+
+[[That's rude. Shouldn't you have respect for the dead?]]
+
+
+:: There are podcasts in the underworld?? {"position":"250,1725","size":"100,100"}
+See, that's another question. Didn't I say I was gettin' sick of those?
+
+[[Jeez. You're pretty prickly, you know that?]]
+
+
+:: There has to be a way {"position":"1225,1700","size":"100,100"}
+There doesn't have to, actually. I mean, for all you know this is just a hallucination produced in your final moments to help you deal with death.
+
+[[Is it?]]
+
+[[But what about the stories?]]
+
+
+:: This can't be right. {"position":"125,1150","size":"100,100"}
+You: I mean, this isn't what the afterlife is supposed to be.
+
+Jerry: Oh, this isn't it. You'll get to your final destination soon enough if you'll just hold your horses. Think of this like the River Styx, or Anubis's scales, or St. Peter's gate if you like.
+
+[[Then are you here to judge me?]]
+
+[[I don't believe you.]]
+
+[[How did I die?]]
+
+[[Is there any way back?]]
+
+(set: $judge to true)
+
+
+:: This elevator's taking a long time. {"position":"1400,2300","size":"100,100"}
+It's a long way down.
+
+[[... Is this it?]]
 
 
 :: Wait, hold on! Am I going to hell or something? {"position":"125,600","size":"100,100"}
@@ -212,10 +449,42 @@ Jerry: Oh wooow, good one. Looks like someone was a comedy major.
 (set: $hellJoke to true)
 
 
+:: Well, is it? {"position":"1400,2550","size":"100,100"}
+Nah. As a matter of fact, here's your floor now.
+
+(The doors open)
+
+Good luck out there, pal.
+
+[[I guess this is goodbye.]]
+
+
+:: What about you? Can't you let me go? {"position":"850,2000","size":"100,100"}
+Maybe... What's in it for me, pal?
+
+[[Money.]]
+
+[[Gratitude.]]
+
+[[The satisfaction of knowing you've done a good deed.->GoodDeed]]
+
+(set: $money to false) (set: $gratitude to false) (set: $goodDeed to false)
+
+
+:: What do you mean, maybe? {"position":"625,1975","size":"100,100"}
+Does it matter if I'm a skeletal ferryman, or guy in a cloak with a scythe, or just some bird? You're going to the same place either way. Though to be honest, Charon's got it the best. At least he gets tips.
+
+[[What if I paid you to let me go?->Money.]]
+
+
 :: What's on the bottom floor? {"position":"250,700","size":"100,100"}
 You really ask a lot of questions, huh? The bottom floor is what you make it. Just enjoy the ride.
 
 [[...]]
+
+[[Am I dead?]]
+
+[[So seriously, where are we going?]]
 
 
 :: What's-? {"position":"500,600","size":"100,100"}
@@ -236,7 +505,7 @@ I said, what floor, pal?
 [[How should I know?]]
 
 
-:: Where am I? {"position":"425,300","size":"100,100"}
+:: Where am I? {"position":"275,300","size":"100,100"}
 What's it look like?
 
 [[... An elevator?]]
@@ -248,12 +517,20 @@ That depends on you, pal. You still haven't given me a floor.
 [[How should I know what floor?->How should I know?]]
 
 
-:: Who are you? {"position":"275,300","size":"100,100"}
+:: Who are you? {"position":"425,300","size":"100,100"}
 The name's Jerry. Can't you read the nametag?
 
 [[Yeah, but who *are* you?]]
 
 [[Where am I?]]
+
+
+:: Will other people be down there? On my floor? {"position":"1150,2600","size":"100,100"}
+You: People I knew who died?
+
+Jerry: Maybe. I've got no idea, really. I just work the elevator.
+
+[[Oh.]]
 
 
 :: Yeah, but who *are* you? {"position":"500,450","size":"100,100"}
@@ -264,7 +541,7 @@ I'm the elevator operator.
 [[Where am I?]]
 
 
-:: Yes. {"position":"250,1450","size":"100,100"}
+:: Yes. {"position":"775,1700","size":"100,100"}
 Good. Then what are you worried about?
 
 [[I'm afraid. What's waiting for me?]]
